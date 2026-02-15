@@ -5,6 +5,7 @@ Detta projekt använder LangChain och OpenAI för att skapa en AI-agent som kan 
 ## Innehåll
 - [Installation av Python](#installation-av-python)
 - [Installation av Dependencies](#installation-av-dependencies)
+- [Ange din Epost för openstreetmap](#Ange-din-Epost-för-openstreetmap)
 - [Konfigurera OpenAI API-nyckel](#konfigurera-openai-api-nyckel)
 - [Köra testerna](#köra-testerna)
 - [Köra LLM-agenten](#köra-llm-agenten)
@@ -113,6 +114,18 @@ Detta projekt använder LangChain och OpenAI för att skapa en AI-agent som kan 
    ```
 
 ---
+
+## Ange din Epost för openstreetmap
+
+Redigera `agents.py` och ersätt `"din.epost@adress.com"` med din riktiga Epostadress:
+```python
+params = {
+        "q": location_name,
+        "format": "json",
+        "email": "darth.vader@empire.com",
+        "limit": 1
+    }
+```
 
 ## Konfigurera OpenAI API-nyckel
 
