@@ -2,7 +2,6 @@ import requests
 from math import radians, sin, cos, sqrt, atan2
 
 
-
 def geocode_location(location_name):
     """
     Hämtar lat/lon för en given ort
@@ -23,6 +22,7 @@ def geocode_location(location_name):
             "lon": float(data[0]["lon"])
         }
     return None
+
 
 def haversine_distance(coord1, coord2):
     """
