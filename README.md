@@ -230,21 +230,6 @@ Action Input: Stockholm
 Final Answer: Avståndet mellan Stockholm och Göteborg är cirka 399 km.
 ```
 
----
-
-## Projektstruktur
-
-```
-.
-├── agents.py           # Funktioner för geokodning och avståndsmätning
-├── llm.py             # LangChain agent-konfiguration
-├── test_agents.py     # Tester för funktionerna
-├── requirements.txt   # Python dependencies
-└── README.md          # Denna fil
-```
-
----
-
 ## Felsökning
 
 ### "python kommandot hittades inte"
