@@ -15,7 +15,6 @@ def geocode_location(location_name):
         "limit": 1
     }
     response = requests.get(url, params=params)
-    print(response)
     data = response.json()
 
     if data:
