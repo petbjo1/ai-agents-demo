@@ -127,16 +127,17 @@ params = {
     }
 ```
 
-## Konfigurera OpenAI API-nyckel
+## Konfigurera Azure OpenAI API-nyckel
 
-Du behöver en OpenAI API-nyckel för att köra LLM-agenten.
+Du behöver en Azure OpenAI API-nyckel för att köra LLM-agenten.
 
 ### Skaffa API-nyckel
 
-1. Gå till [platform.openai.com](https://platform.openai.com)
-2. Skapa ett konto eller logga in
-3. Navigera till API-nycklar
-4. Skapa en ny API-nyckel
+1. Gå till [ai.azure.com](https://ai.azure.com)
+2. Logga in och gå till ditt projekt (project-agio-id)
+3. Navigera till Models + endpoints
+4. Välj gpt-4.1.
+5. Här hittar du värden för API-nyckel, API-version, endpoint. Deployment name är det som listas under name vilket för den här modellen är 'gpt-4.1'.
 
 ### Sätt API-nyckeln
 
@@ -165,6 +166,16 @@ llm = ChatOpenAI(
     model="gpt-3.5-turbo",
     api_key="sk-proj-xxxxxxxxxxxxxxxxxx"  # Din riktiga nyckel
 )
+```
+
+**Alternativ 3: Genom en .env-fil**
+Skapa en `.env.local` fil i projektmappen:
+
+```bash
+AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
+AZURE_OPENAI_API_KEY=your-api-key-here
+AZURE_OPENAI_DEPLOYMENT=gpt-4.1
+AZURE_OPENAI_API_VERSION=2024-12-01-preview
 ```
 
 ⚠️ **VARNING:** Lägg aldrig API-nycklar i Git! Lägg till `.env` i `.gitignore` om du använder miljövariabler.
