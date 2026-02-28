@@ -9,7 +9,7 @@ Detta projekt använder LangChain och OpenAI för att skapa en AI-agent som kan 
 - [Konfigurera OpenAI API-nyckel](#konfigurera-openai-api-nyckel)
 - [Köra testerna](#köra-testerna)
 - [Köra LLM-agenten](#köra-llm-agenten)
-
+- [Om du hellre vill använda Azure LLM 🎯](#Om-du-hellre-vill-använda-Azure-LLM)
 ---
 
 ## Installation av Python
@@ -258,6 +258,12 @@ Final Answer: Avståndet mellan Stockholm och Göteborg är cirka 399 km.
 - Lägg till fler verktyg (tools) för agenten
 - Experimentera med olika LLM-modeller (t.ex. `gpt-4`)
 
+## Om du hellre vill använda Azure LLM
+- [Öppna detta dokument i Azure branchen](https://github.com/petbjo1/ai-agents-demo/tree/azureai-version)
+- Eller klona Azure branchen direkt
+  ```bash
+   git clone --branch azureai-version --single-branch git@github.com:petbjo1/ai-agents-demo.git
+   ```
 ## Licens
 
 Detta är ett utbildningsprojekt.
