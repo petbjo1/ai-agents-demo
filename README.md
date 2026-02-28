@@ -1,18 +1,25 @@
 # LLM Agent för Avståndsmätning
 
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/downloads/)
+[![LangChain](https://img.shields.io/badge/LangChain-0.3.13-1C3C3C)](https://python.langchain.com/)
+[![OpenAI](https://img.shields.io/badge/OpenAI-API-412991?logo=openai&logoColor=white)](https://platform.openai.com/)
+[![Last Commit](https://img.shields.io/github/last-commit/petbjo1/ai-agents-demo)](https://github.com/petbjo1/ai-agents-demo/commits/main)
+[![GitHub Stars](https://img.shields.io/github/stars/petbjo1/ai-agents-demo?style=social)](https://github.com/petbjo1/ai-agents-demo/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/petbjo1/ai-agents-demo)](https://github.com/petbjo1/ai-agents-demo/issues)
+
 Detta projekt använder LangChain och OpenAI för att skapa en AI-agent som kan beräkna avstånd mellan städer.
 
-## Innehåll
-- [Installation av Python](#installation-av-python)
-- [Installation av Dependencies](#installation-av-dependencies)
-- [Ange din Epost för openstreetmap](#Ange-din-Epost-för-openstreetmap)
-- [Konfigurera OpenAI API-nyckel](#konfigurera-openai-api-nyckel)
-- [Köra testerna](#köra-testerna)
-- [Köra LLM-agenten](#köra-llm-agenten)
-- [Om du hellre vill använda Azure LLM 🎯](#Om-du-hellre-vill-använda-Azure-LLM)
+## Innehåll 📚
+- 🐍 [Installation av Python](#installation-av-python)
+- 📦 [Installation av Dependencies](#installation-av-dependencies)
+- 📧 [Ange din Epost för openstreetmap](#ange-din-epost-for-openstreetmap)
+- 🔑 [Konfigurera OpenAI API-nyckel](#konfigurera-openai-api-nyckel)
+- 🧪 [Köra testerna](#kora-testerna)
+- 🤖 [Köra LLM-agenten](#kora-llm-agenten)
 ---
 
-## Installation av Python
+<a id="installation-av-python"></a>
+## Installation av Python 🐍
 
 ### Windows
 
@@ -49,7 +56,8 @@ Detta projekt använder LangChain och OpenAI för att skapa en AI-agent som kan 
 
 ---
 
-## Installation av Dependencies
+<a id="installation-av-dependencies"></a>
+## Installation av Dependencies 📦
 
 ### Windows
 
@@ -115,7 +123,8 @@ Detta projekt använder LangChain och OpenAI för att skapa en AI-agent som kan 
 
 ---
 
-## Ange din Epost för openstreetmap
+<a id="ange-din-epost-for-openstreetmap"></a>
+## Ange din Epost för openstreetmap 📧
 
 Redigera `agents.py` och ersätt `"din.epost@adress.com"` med din riktiga Epostadress:
 ```python
@@ -127,16 +136,17 @@ params = {
     }
 ```
 
-## Konfigurera OpenAI API-nyckel
+<a id="konfigurera-openai-api-nyckel"></a>
+## Konfigurera OpenAI API-nyckel 🔑
 
 Du behöver en OpenAI API-nyckel för att köra LLM-agenten.
 
 ### Skaffa API-nyckel
 
-1. Gå till [platform.openai.com](https://platform.openai.com)
-2. Skapa ett konto eller logga in
-3. Navigera till API-nycklar
-4. Skapa en ny API-nyckel
+1. 🌐 Gå till [platform.openai.com](https://platform.openai.com)
+2. 👤 Skapa ett konto eller logga in
+3. 🧭 Navigera till API-nycklar
+4. 🆕 Skapa en ny API-nyckel
 
 ### Sätt API-nyckeln
 
@@ -171,7 +181,8 @@ llm = ChatOpenAI(
 
 ---
 
-## Köra testerna
+<a id="kora-testerna"></a>
+## Köra testerna 🧪
 
 Testerna validerar att funktionerna för geokodning och avståndsmätning fungerar korrekt.
 
@@ -196,7 +207,8 @@ test_agents.py::test_calculate_city_distance_failure PASSED
 
 ---
 
-## Köra LLM-agenten
+<a id="kora-llm-agenten"></a>
+## Köra LLM-agenten 🤖
 
 LLM-agenten använder AI för att besvara frågor om avstånd mellan städer.
 
@@ -210,14 +222,14 @@ python llm.py
 python3 llm.py
 ```
 
-### Vad händer?
+### Vad händer? ⚙️
 
 Agenten kommer att:
-1. Läsa frågan "Hur långt är det från Stockholm till Göteborg?"
-2. Använda `geocoder`-verktyget för att hitta koordinater för Stockholm
-3. Använda `geocoder`-verktyget för att hitta koordinater för Göteborg
-4. Använda `distance_calc`-verktyget för att beräkna avståndet
-5. Ge ett svar i naturligt språk
+1. ❓ Läsa frågan "Hur långt är det från Stockholm till Göteborg?"
+2. 📍 Använda `geocoder`-verktyget för att hitta koordinater för Stockholm
+3. 📍 Använda `geocoder`-verktyget för att hitta koordinater för Göteborg
+4. 📏 Använda `distance_calc`-verktyget för att beräkna avståndet
+5. 🗣️ Ge ett svar i naturligt språk
 
 ### Exempel på output
 ```
@@ -230,33 +242,33 @@ Action Input: Stockholm
 Final Answer: Avståndet mellan Stockholm och Göteborg är cirka 399 km.
 ```
 
-## Felsökning
+## Felsökning 🛠️
 
 ### "python kommandot hittades inte"
-- **Windows:** Se till att Python är tillagt i PATH under installationen
-- **macOS:** Använd `python3` istället för `python`
+- 🪟 **Windows:** Se till att Python är tillagt i PATH under installationen
+- 🍎 **macOS:** Använd `python3` istället för `python`
 
 ### "ModuleNotFoundError: No module named 'langchain'"
-- Kontrollera att du aktiverat den virtuella miljön (`venv`)
-- Kör `pip install -r requirements.txt` igen
+- ✅ Kontrollera att du aktiverat den virtuella miljön (`venv`)
+- 🔁 Kör `pip install -r requirements.txt` igen
 
 ### "OpenAI API error: Invalid API key"
-- Kontrollera att din API-nyckel är korrekt
-- Se till att du har tillräcklig kredit på ditt OpenAI-konto
-- Verifiera att miljövariabeln är satt (kör `echo %OPENAI_API_KEY%` på Windows eller `echo $OPENAI_API_KEY` på macOS)
+- 🔍 Kontrollera att din API-nyckel är korrekt
+- 💳 Se till att du har tillräcklig kredit på ditt OpenAI-konto
+- 🌱 Verifiera att miljövariabeln är satt (kör `echo %OPENAI_API_KEY%` på Windows eller `echo $OPENAI_API_KEY` på macOS)
 
 ### "Rate limit exceeded"
-- Du har överskridit OpenAI:s API-gränser
-- Vänta en stund och försök igen
-- Överväg att uppgradera din OpenAI-plan
+- 🚦 Du har överskridit OpenAI:s API-gränser
+- ⏳ Vänta en stund och försök igen
+- 📈 Överväg att uppgradera din OpenAI-plan
 
 ---
 
-## Nästa steg
+## Nästa steg 🚀
 
-- Modifiera frågan i `llm.py` för att testa med andra städer
-- Lägg till fler verktyg (tools) för agenten
-- Experimentera med olika LLM-modeller (t.ex. `gpt-4`)
+- 🧠 Modifiera frågan i `llm.py` för att testa med andra städer
+- 🧰 Lägg till fler verktyg (tools) för agenten
+- 🧪 Experimentera med olika LLM-modeller (t.ex. `gpt-4`)
 
 ## Om du hellre vill använda Azure LLM
 - [Öppna detta dokument i Azure branchen](https://github.com/petbjo1/ai-agents-demo/tree/azureai-version)
