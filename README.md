@@ -126,7 +126,7 @@ Detta projekt använder LangChain och OpenAI för att skapa en AI-agent som kan 
 <a id="ange-din-epost-for-openstreetmap"></a>
 ## Ange din Epost för openstreetmap 📧
 
-Redigera `agents.py` och ersätt `"din.epost@adress.com"` med din riktiga Epostadress:
+Redigera `agents.py` och ersätt `"din.epost@adress.com"` i request och header med din riktiga Epostadress:
 ```python
 params = {
         "q": location_name,
@@ -134,6 +134,10 @@ params = {
         "email": "darth.vader@empire.com",
         "limit": 1
     }
+headers = {
+     "User-Agent": "AIDemo/1.0 (din.epost@adress.com)"
+    }
+response = requests.get(url, params=params, headers=headers)
 ```
 
 <a id="konfigurera-openai-api-nyckel"></a>

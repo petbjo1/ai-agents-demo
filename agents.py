@@ -13,7 +13,10 @@ def geocode_location(location_name):
         "email": "din.epost@adress.com",
         "limit": 1
     }
-    response = requests.get(url, params=params)
+    headers = {
+        "User-Agent": "AIDemo/1.0 (din.epost@adress.com)"
+    }
+    response = requests.get(url, params=params, headers=headers)
     data = response.json()
 
     if data:
